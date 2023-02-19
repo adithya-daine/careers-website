@@ -29,6 +29,7 @@
         height: 300px;
         width: 100%;
         object-fit: cover;
+        margin-bottom: 16px;
       }
 
       #container{
@@ -38,6 +39,7 @@
     </style>
   </head>
   <body>
+    {% include 'nav.html' %}
     
     <div id="container">
     
@@ -45,10 +47,18 @@
     <img id="banner" class="img-fluid" src="/static/career-banner.jpg">
       
     <h2 class="mt-2 mb-2">About Careers</h2>
-      
-    <p class="bodytext lead border-bottom" style="margin-bottom: 16px; padding-bottom: 8px">
+
+    <div class=" row border-bottom" style="margin-bottom: 16px; padding-bottom: 8px">
+    <div class="col-6">
+    <p class="bodytext lead" >
       Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
     </p>
+    </div>
+
+    <div class="d-none d-md-block col-md-6">
+    <img class="img-fluid" src="/static/people-working.jpg">
+    </div>
+    </div>
     
     <h2>Job Openings</h2>
       
@@ -59,10 +69,10 @@
     </p>
 
     <div style="text-align: center;">
-      <button class="btn btn-primary btn-lg">Contact Us</button>
-      <p class="mt-4">Copyright 2023</p>
+      <a href="mailto:Adithya.daine@gmail.com?subject=Question%20About%20Job%20Openings&body=My%20Name%3A%20%3CYour%20Name%3E%0D%0A%0D%0AMy%20Question%3A%20%3CEnter%20question%3E" class="btn btn-primary btn-lg">Contact Us</a>
     </div>
-      
-    </div>
+  </div>
+
+    {% include 'footer.html' %}
   </body>
 </html>
